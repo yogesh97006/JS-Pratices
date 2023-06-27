@@ -53,5 +53,50 @@ for(let i of Num){
 
 console.log(Num.push(60),Num.pop(),Num.unshift(0),Num.shift())
 
+let j=new Array(100) // it will take ass 100 undefined items if u use onl single arguments
+
+console.log(j.length,Array.isArray(j))
+console.log(j instanceof Object)
+console.log(j instanceof Array)
+
+let Spl=Num.splice(3,2,20,10)
+console.log(Spl,Num)
+
+let Sli=Num.slice(2)
+console.log(Sli,Num)
+
+let Sum=Array.from(b)
+console.log(Sum)
 
 
+const index=Sum.keys()
+
+for (let i of index){
+  console.log(i)
+}
+
+Num.forEach((num)=>{
+  console.log(num*num)
+})
+
+Num.map((Val,Ind,Arr)=>{
+  console.log(Val,Ind,Arr)
+  console.log(typeof Val,typeof Ind,typeof Arr)
+  console.log(Val*2,Ind*2,Arr*2)
+  console.log(typeof (Val+Ind+Arr))
+  console.log(typeof Arr)
+})
+
+Num.flatMap((N)=>{
+  console.log(N+5)
+})
+
+let NewNum=Num.filter((N)=>{
+  return (N>15)
+})
+
+console.log(NewNum,Num)
+
+Num.reduce((t,v,i,a)=>{
+  console.log(t,v,i,a)
+})
